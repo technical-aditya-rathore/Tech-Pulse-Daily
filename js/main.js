@@ -5,25 +5,39 @@
 // // Base URL for news API
 // const URL = "https://newsapi.org/v2/everything?q=";
 
-// const searchButton = document.getElementById("search-button");
-// const searchText = document.getElementById("search-text");
+const searchButton = document.getElementById("search-button");
+const searchText = document.getElementById("search-text");
 
-// searchButton.addEventListener("click", () => {
-//   const query = searchText.value.trim();
+searchButton.addEventListener("click", () => {
+  const query = searchText.value.trim();
 
-//   if (!query) return; // Don't fetch if query is empty
-//   fetchNews(query);
-//   searchText.value = "";
-//   document.getElementById("top-news").innerHTML = ""; // Clear the input after search
-// });
+  if (!query) return; // Don't fetch if query is empty
+  fetchNews(query);
+  searchText.value = "";
+  document.getElementById("top-news").innerHTML = ""; // Clear the input after search
+});
 
 // Fetch news articles asynchronously based on search query
+// async function fetchNews(query) {
+//   try {
+//     const res = await fetch("/api/news");
+//     // const res = await fetch(
+//     //   `${URL}${encodeURIComponent(query)}&apiKey=${apiKey}`
+//     // );
+//     if (!res.ok) {
+//       throw new Error(`HTTP error! status: ${res.status}`);
+//     }
+//     const data = await res.json();
+//     bindData(data.articles);
+//   } catch (error) {
+//     console.error("Failed to fetch news:", error);
+//   }
+// }
+
+
 async function fetchNews(query) {
   try {
-    const res = await fetch("/api/news");
-    // const res = await fetch(
-    //   `${URL}${encodeURIComponent(query)}&apiKey=${apiKey}`
-    // );
+    const res = await fetch(`/api/news?query=${encodeURIComponent(query)}`);
     if (!res.ok) {
       throw new Error(`HTTP error! status: ${res.status}`);
     }
@@ -33,6 +47,8 @@ async function fetchNews(query) {
     console.error("Failed to fetch news:", error);
   }
 }
+
+
 
 // Bind fetched articles to the DOM
 function bindData(articles) {
