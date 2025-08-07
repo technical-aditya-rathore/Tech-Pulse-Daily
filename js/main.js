@@ -1,21 +1,21 @@
-// Your API key - remember to keep it secret in production!
-// const apiKey = "0ea2bdb2e0714ed0a010339f866ae4b0";
-const apiKey = "e169443123484483a0b943654d5d3ebd";
+// // Your API key - remember to keep it secret in production!
+// // const apiKey = "0ea2bdb2e0714ed0a010339f866ae4b0";
+// const apiKey = "e169443123484483a0b943654d5d3ebd";
 
-// Base URL for news API
-const URL = "https://newsapi.org/v2/everything?q=";
+// // Base URL for news API
+// const URL = "https://newsapi.org/v2/everything?q=";
 
-const searchButton = document.getElementById("search-button");
-const searchText = document.getElementById("search-text");
+// const searchButton = document.getElementById("search-button");
+// const searchText = document.getElementById("search-text");
 
-searchButton.addEventListener("click", () => {
-  const query = searchText.value.trim();
+// searchButton.addEventListener("click", () => {
+//   const query = searchText.value.trim();
 
-  if (!query) return; // Don't fetch if query is empty
-  fetchNews(query);
-  searchText.value = "";
-  document.getElementById("top-news").innerHTML = ""; // Clear the input after search
-});
+//   if (!query) return; // Don't fetch if query is empty
+//   fetchNews(query);
+//   searchText.value = "";
+//   document.getElementById("top-news").innerHTML = ""; // Clear the input after search
+// });
 
 // Fetch news articles asynchronously based on search query
 async function fetchNews(query) {
