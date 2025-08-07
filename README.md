@@ -21,7 +21,7 @@
 <hr>
 <br>
 
-## 🚀 Features
+## Features
 
 - **Search-based News Fetching** – Search news by topic or keyword.
 - **Dynamic News Cards** – Display news using stylish, scrollable cards.
