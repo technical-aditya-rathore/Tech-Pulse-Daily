@@ -1,0 +1,13 @@
+  =>  Template Name    : NEWS - Bootstrap News Template
+
+  =>  Template Link    : https://htmlcodex.com/bootstrap-news-template
+
+  =>  Template License : https://htmlcodex.com/license (or read the LICENSE.txt file)
+
+  =>  Template Author  : Aditya Kumar jha
+
+  =>  Author Website   : https://htmlcodex.com
+
+  =>  About HTML Codex : HTML Codex is one of the top creators and publishers of Free HTML templates, HTML landing pages, HTML email templates and HTML snippets in the world. Read more at ( https://htmlcodex.com/about-us )
+
+  // let  key = "9f382f2fd08b45d4a9fdea8368d76c8d"; // ⚠️ Replace with your real API key later
